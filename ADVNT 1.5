@@ -1,0 +1,34 @@
+public class Main {
+    public static void main(String[] args) throws Exception{
+       BufferedReader br = new BufferedReader(new FileReader("inputs/day1.txt"));
+        
+    int calori = 0;
+    int fattestelf = 0;
+  
+    List<Integer>caloriList = new ArrayList<>();
+      
+    String line; 
+          while((line = br.readLine()) != null){
+            String Strbisk = line.trim();
+            if(Strbisk.isBlank()){
+         if(fattestelf < calori){
+                fattestelf = calori;
+            }
+                caloriList.add(calori);
+                calori = 0;
+                continue;
+
+            }
+         calori += Integer.parseInt(Strbisk);
+        }
+        caloriList.add(calori);
+        if(fattestelf < calori){
+            fattestelf = calori;
+        }
+        
+        System.out.println(fattestelf);
+
+        caloriList.sort((a, b) -> (b - a));
+        System.out.println(caloriList.get(0) + caloriList.get(1) +caloriList.get(2));
+    }
+}
