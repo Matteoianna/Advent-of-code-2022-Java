@@ -1,2 +1,4 @@
 # Advent-of-code-2022-Java
-Java advent of code answer 2022
+               I ---------------------WARNING-----------------------I
+               I YOU SHOULD ATTEMPT THESE YOURSELF! Spoilers ahead  I
+               I ---------------------WARNING-----------------------I
