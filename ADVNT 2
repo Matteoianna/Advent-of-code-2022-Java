@@ -1,0 +1,49 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Day_2 {
+    public static void main(String[] args) throws Exception{
+       BufferedReader br = new BufferedReader(new FileReader("inputs/day2.txt"));
+      
+    String line; 
+    int score = 0;
+          while((line = br.readLine()) != null){
+            String [] inp = line.split(" ");
+        String ba = inp[0] + inp[1];
+           //change integer value for first part, this is for second part 
+            switch(ba){
+              case "AX":
+                    score += (3 + 0);
+                break;
+               case "AY":
+                    score += (3 + 1);
+                 break;
+                case "AZ":
+                    score += (2 + 6);
+                  break;
+                case "BX":
+                    score += (1 + 0);
+                  break;
+                case "BY":
+                    score += (2 + 3);
+                   break;
+                case "BZ":
+                     score += (3 + 6);
+                    break;
+                case "CX":
+                     score += (2 + 0);
+                    break;
+                case "CY":
+                      score += (3 + 3);
+                      break;
+                case "CZ":
+                      score += (1 + 6);
+                      break;
+
+            }
+            System.out.println(score);
+        }
+    }
+}
